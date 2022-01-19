@@ -1,50 +1,32 @@
 #!/bin/bash
 
+#######################################################
 #
-# Verifier nombre de parametres passer au script
+## Main :
+#  Le script recoit deux  nombres en parametres et il
+#  affiche le plus grand de ces deux nombres.
 #
-function verifierParameteres(){
-  local nombreParams=$1
-  if [[ $nombreParams < 2 ]]; then
-    echo "ERREUR : Il faut passer deux parametres."
-    return 1;
-  else
-    return 0;
-  fi
-}
+#######################################################
 
+# Deux nombres en parametres
+if [[ ${#} == 2 ]]; then
 
-##############################################
-#
-## Main
-#
-##############################################
-echo Hello World !!
+   # Reccuperer les deux nombres
+   nombre_1=$1
+   nombre_2=$2
 
-# Verifier Parameteres
-verifierParameteres $#
+   # Retourner le Max
+   if [[ ${nombre_1} < ${nombre_1} ]]; then
+     max=${nombre_1}
+   else
+     max=${nombre_2}
+   fi
 
-# Parametres valides
-if [[ ${?} == 0 ]]; then
+   # Afficher le max
+   echo "La plus grande valeur entre ${nombre_1} et ${nombre_2} c'est ${max}."
+   exit 0;
 
- # Reccuperer les deux nombres
- nombre_1=$1
- nombre_2=$2
-
- # Il faut verifier qu ils sont numeriques !!
- # TO DO .....
-
- echo "nombre_1= = ${nombre_1}"
- echo "nombre_2= = ${nombre_2}"
- 
- # Retourner le Max
- if [[ ${nombre_1} < ${nombre_1} ]]; then
-   max=${nombre_1}
- else
-   max=${nombre_2}
- fi
-
- # Afficher le max
- echo "La plus grande valeur entre ${nombre_1} et ${nombre_2} c'est ${max}."
-
+else
+   echo "ERREUR : Il faut passer deux parametres."
+   exit 1;
 fi
