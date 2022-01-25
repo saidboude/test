@@ -16,7 +16,7 @@ if [[ ${#} == 2 ]]; then
    nombre_2=$2
 
    # Retourner le Max
-   if [[ ${nombre_1} < ${nombre_1} ]]; then
+   if [[ ${nombre_1} > ${nombre_2} ]]; then
      max=${nombre_1}
    else
      max=${nombre_2}

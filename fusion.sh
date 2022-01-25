@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Token :
-# 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
-#
-
 #
 # Valider les fichiers passer en parametres au script
 #
@@ -64,7 +60,7 @@ if [[ ${#} == 2 ]]; then
 else
 
   # Fin avec erreur
-  echo "ERREUR : Il faut passer deux fichiers valides en parametres."
+  echo "ERREUR : Il faut passer juste deux fichiers valides en parametres."
   exit 1;
 
 fi
